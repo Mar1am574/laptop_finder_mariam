@@ -1,0 +1,35 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@theme {
+  --color-surface: var(--surface);
+  --color-panel: var(--panel);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-line: var(--line);
+}
+
+:root {
+  --surface: #f4f8f5;
+  --panel: #ffffff;
+  --ink: #172b25;
+  --muted: #64756e;
+  --accent: #16866b;
+  --line: #dce8e1;
+}
+html[data-theme="performance"] {
+  --surface: #111827;
+  --panel: #1f2937;
+  --ink: #f9fafb;
+  --muted: #c0cad5;
+  --accent: #f59e0b;
+  --line: #374151;
+}
+@layer base {
+  body { @apply bg-surface text-ink; }
+}
+@layer components {
+  .laptop-card { @apply rounded-2xl border border-line bg-panel p-4 shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-lg; }
+  .btn-action { @apply inline-flex items-center justify-center rounded-xl bg-accent px-4 py-2 font-semibold text-white transition hover:opacity-90 focus:outline-2 focus:outline-offset-2; }
+}
