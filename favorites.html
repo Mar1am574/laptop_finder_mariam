@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My favorites | Student Laptop Finder</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-surface text-ink">
+  <header class="border-b border-line bg-panel">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4">
+      <a href="index.html" class="text-xl font-extrabold">💻 Student Laptop Finder</a>
+      <button id="menu-toggle" class="rounded-lg border border-line px-3 py-2 md:hidden">Menu</button>
+      <nav id="nav-links" class="hidden w-full flex-col gap-1 md:flex md:w-auto md:flex-row"><a class="rounded-lg px-3 py-2 hover:bg-surface " href="index.html">Home</a><a class="rounded-lg px-3 py-2 hover:bg-surface " href="laptops.html">Laptops</a><a class="rounded-lg px-3 py-2 hover:bg-surface font-bold text-accent" href="favorites.html">Favorites</a><a class="rounded-lg px-3 py-2 hover:bg-surface " href="compare.html">Compare</a></nav>
+      <button id="theme-toggle" class="rounded-xl border border-line px-3 py-2 text-sm font-semibold">Change theme</button>
+    </div>
+  </header>
+  <main class="mx-auto max-w-7xl px-4 py-10">
+    
+<p class="font-semibold text-accent">Your saved list</p><h1 class="mt-1 text-3xl font-extrabold">My favorites</h1>
+<div id="favorite-summary" class="mt-5 rounded-2xl bg-panel p-5">Loading favorites...</div>
+<section id="favorite-grid" class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></section>
+
+  </main>
+  <footer class="mt-12 border-t border-line py-6 text-center text-sm text-muted">Student Laptop Finder · SW302 Assignment 2</footer>
+  <script type="module" src="./src/js/favorites.js"></script>
+</body>
+</html>

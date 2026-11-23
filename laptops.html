@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laptop catalogue | Student Laptop Finder</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-surface text-ink">
+  <header class="border-b border-line bg-panel">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4">
+      <a href="index.html" class="text-xl font-extrabold">💻 Student Laptop Finder</a>
+      <button id="menu-toggle" class="rounded-lg border border-line px-3 py-2 md:hidden">Menu</button>
+      <nav id="nav-links" class="hidden w-full flex-col gap-1 md:flex md:w-auto md:flex-row"><a class="rounded-lg px-3 py-2 hover:bg-surface " href="index.html">Home</a><a class="rounded-lg px-3 py-2 hover:bg-surface font-bold text-accent" href="laptops.html">Laptops</a><a class="rounded-lg px-3 py-2 hover:bg-surface " href="favorites.html">Favorites</a><a class="rounded-lg px-3 py-2 hover:bg-surface " href="compare.html">Compare</a></nav>
+      <button id="theme-toggle" class="rounded-xl border border-line px-3 py-2 text-sm font-semibold">Change theme</button>
+    </div>
+  </header>
+  <main class="mx-auto max-w-7xl px-4 py-10">
+    
+<div class="flex flex-wrap items-end justify-between gap-4"><div><p class="font-semibold text-accent">Explore</p><h1 class="mt-1 text-3xl font-extrabold">Laptop catalogue</h1></div><p id="result-count" class="text-muted">Loading laptops...</p></div>
+<section class="mt-7 grid gap-3 rounded-2xl bg-panel p-4 sm:grid-cols-2 lg:grid-cols-5">
+  <input id="search" type="search" placeholder="Search name or brand" class="rounded-xl border-line bg-surface">
+  <select id="category" class="rounded-xl border-line bg-surface"><option value="">All categories</option><option value="ultrabook">Ultrabook</option><option value="gaming">Gaming</option><option value="2-in-1">2-in-1</option><option value="creator">Creator</option><option value="budget">Budget</option></select>
+  <input id="max-price" type="number" min="0" placeholder="Maximum price (EGP)" class="rounded-xl border-line bg-surface">
+  <select id="min-ram" class="rounded-xl border-line bg-surface"><option value="">Any RAM</option><option value="8">At least 8 GB</option><option value="16">At least 16 GB</option><option value="32">At least 32 GB</option></select>
+  <select id="sort" class="rounded-xl border-line bg-surface"><option value="price-asc">Price: low to high</option><option value="price-desc">Price: high to low</option><option value="batteryHours-desc">Battery: high to low</option><option value="batteryHours-asc">Battery: low to high</option><option value="weightKg-asc">Weight: light to heavy</option><option value="weightKg-desc">Weight: heavy to light</option></select>
+</section>
+<section id="laptop-grid" class="mt-7 grid gap-5 sm:grid-cols-2 lg:grid-cols-3"></section>
+
+  </main>
+  <footer class="mt-12 border-t border-line py-6 text-center text-sm text-muted">Student Laptop Finder · SW302 Assignment 2</footer>
+  <script type="module" src="./src/js/laptops.js"></script>
+</body>
+</html>

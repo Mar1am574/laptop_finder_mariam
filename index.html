@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Student Laptop Finder</title>
+  <link href="./dist/output.css" rel="stylesheet">
+</head>
+<body class="min-h-screen bg-surface text-ink">
+  <header class="border-b border-line bg-panel">
+    <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-3 px-4 py-4">
+      <a href="index.html" class="text-xl font-extrabold">💻 Student Laptop Finder</a>
+      <button id="menu-toggle" class="rounded-lg border border-line px-3 py-2 md:hidden">Menu</button>
+      <nav id="nav-links" class="hidden w-full flex-col gap-1 md:flex md:w-auto md:flex-row"><a class="rounded-lg px-3 py-2 hover:bg-surface font-bold text-accent" href="index.html">Home</a><a class="rounded-lg px-3 py-2 hover:bg-surface " href="laptops.html">Laptops</a><a class="rounded-lg px-3 py-2 hover:bg-surface " href="favorites.html">Favorites</a><a class="rounded-lg px-3 py-2 hover:bg-surface " href="compare.html">Compare</a></nav>
+      <button id="theme-toggle" class="rounded-xl border border-line px-3 py-2 text-sm font-semibold">Change theme</button>
+    </div>
+  </header>
+  <main class="mx-auto max-w-7xl px-4 py-10">
+    
+<section class="rounded-3xl bg-panel px-6 py-12 md:px-12">
+  <p class="font-semibold text-accent">Find a laptop that fits your student life</p>
+  <h1 class="mt-3 max-w-3xl text-4xl font-extrabold md:text-5xl">The right laptop makes studying easier.</h1>
+  <p class="mt-4 max-w-2xl text-muted">Browse student laptops, compare specifications, and save your favorites in one simple place.</p>
+  <a href="laptops.html" class="btn-action mt-7">Browse laptops</a>
+</section>
+<section class="mt-10"><h2 class="mb-5 text-2xl font-bold">Quick statistics</h2><div id="home-stats" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"><div class="h-28 animate-pulse rounded-2xl bg-panel"></div></div></section>
+<section class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+  <a href="laptops.html" class="laptop-card"><h3 class="font-bold">Laptop catalogue →</h3><p class="mt-2 text-sm text-muted">Search and filter laptops.</p></a>
+  <a href="details.html?id=1" class="laptop-card"><h3 class="font-bold">Laptop details →</h3><p class="mt-2 text-sm text-muted">See full specifications.</p></a>
+  <a href="favorites.html" class="laptop-card"><h3 class="font-bold">My favorites →</h3><p class="mt-2 text-sm text-muted">Keep your saved laptops.</p></a>
+  <a href="compare.html" class="laptop-card"><h3 class="font-bold">Compare →</h3><p class="mt-2 text-sm text-muted">Compare your favorites.</p></a>
+</section>
+
+  </main>
+  <footer class="mt-12 border-t border-line py-6 text-center text-sm text-muted">Student Laptop Finder · SW302 Assignment 2</footer>
+  <script type="module" src="./src/js/home.js"></script>
+</body>
+</html>
